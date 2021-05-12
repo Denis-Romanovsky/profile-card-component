@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background-color: #19a2ae;
+  overflow: hidden;
+  position: relative;
+}
+body::before {
+  position: absolute;
+  content: "";
+  background: url("/images/bg-pattern-top.svg") no-repeat;
+  width: 1000px;
+  height: 1000px;
+  top: -400px;
+  right: 50%;
+  z-index: 0;
+}
+body::after {
+  position: absolute;
+  content: "";
+  background-image: url("/images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  width: 1000px;
+  height: 1000px;
+  top: 500px;
+  left: 50%;
+  z-index: 0;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 3;
+}
+
+#card {
+  border-radius: 15px;
+  width: 370px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px 3px rgba(24, 24, 24, 0.137);
+  z-index: 2;
+}
+
+.card-header {
+  height: 150px;
+  width: 100%;
+  position: relative;
+}
+.card-header .card-bg {
+  background-image: url("/images/bg-pattern-card.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+}
+.card-header .card-photo {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid white;
+  top: 95%;
+  left: 50%;
+  width: 108px;
+  margin-top: -54px;
+  margin-left: -54px;
+}
+
+.card-bio {
+  text-align: center;
+  background-color: #fff;
+  padding-top: 3.5rem;
+  padding-bottom: 1.55rem;
+  border-bottom: 1px solid #dadada;
+}
+.card-bio .card-bio-name {
+  font-size: 18px;
+  margin-top: 0.35rem;
+  padding: 0.75rem;
+  color: #363636;
+}
+.card-bio .card-bio-name .card-bio-age {
+  color: #969696;
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+.card-bio .card-bio-city {
+  color: #969696;
+  font-size: 15px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+}
+.card-info .card-info-item .item-counter {
+  color: #363636;
+  font-size: 18px;
+  margin-top: 0.25rem;
+}
+.card-info .card-info-item .item-name {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  color: #969696;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    margin: 0 1.5rem;
+  }
+}
+@media screen and (max-width: 345px) {
+  .wrapper {
+    margin: 0 1rem;
+  }
+
+  .card-info {
+    padding: 1.5rem 1rem;
+  }
+  .card-info .card-info-item .item-counter {
+    font-size: 16px;
+  }
+  .card-info .card-info-item .item-name {
+    letter-spacing: 0.5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
